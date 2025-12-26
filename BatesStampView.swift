@@ -6,6 +6,7 @@ struct BatesStampView: View {
     @State private var startingNumber: Int = 1
     @State private var isBatesEnabled: Bool = true
     @State private var isProcessing: Bool = false
+    @State private var forceProceed: Bool = false
     
     private var supportedURLs: [URL] {
         urls.filter { PDFManager.isSupported(url: $0) }
@@ -13,6 +14,24 @@ struct BatesStampView: View {
     
     private var unsupportedURLs: [URL] {
         urls.filter { !PDFManager.isSupported(url: $0) }
+    }
+    
+    private var totalFileSize: Int64 {
+        PDFManager.totalFileSize(urls: supportedURLs)
+    }
+    
+    private var fileSizeWarning: String? {
+        let sizeMB = Double(totalFileSize) / (1024 * 1024)
+        if sizeMB > 1500 {
+            return "Very Large File Warning: Combined size exceeds 1.5 GB. Process may consume significant resources."
+        } else if sizeMB > 500 {
+            return "Large File Warning: Combined size exceeds 500 MB. Process might take a few minutes."
+        }
+        return nil
+    }
+    
+    private var needsForceProceed: Bool {
+        Double(totalFileSize) / (1024 * 1024) > 1500
     }
     
     var body: some View {
@@ -44,6 +63,27 @@ struct BatesStampView: View {
                 Divider()
             }
             
+            // Large File Warning
+            if let warning = fileSizeWarning {
+                VStack(alignment: .leading, spacing: 8) {
+                    HStack {
+                        Image(systemName: "slowmo")
+                        Text(warning)
+                            .font(.subheadline.bold())
+                    }
+                    .foregroundColor(.red)
+                    
+                    if needsForceProceed {
+                        Toggle("Force Proceed", isOn: $forceProceed)
+                            .font(.caption)
+                    }
+                }
+                .padding()
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(Color.red.opacity(0.05))
+                Divider()
+            }
+            
             Form {
                 Section {
                     Toggle("Add Bates Stamp", isOn: $isBatesEnabled)
@@ -60,7 +100,7 @@ struct BatesStampView: View {
                 }
             }
             .formStyle(.grouped)
-            .padding(.top, -10) // Tighter integration
+            .padding(.top, -10)
             
             Divider()
             
@@ -84,7 +124,7 @@ struct BatesStampView: View {
                     processFiles()
                 }
                 .buttonStyle(.borderedProminent)
-                .disabled(isProcessing || supportedURLs.isEmpty)
+                .disabled(isProcessing || supportedURLs.isEmpty || (needsForceProceed && !forceProceed))
                 .keyboardShortcut(.defaultAction)
                 .font(.body)
             }
@@ -116,7 +156,6 @@ struct BatesStampView: View {
         
         DispatchQueue.global(qos: .userInitiated).async {
             do {
-                // Use the directory of the first file
                 let outputDirectory = filesToProcess.first?.deletingLastPathComponent() ?? 
                                      FileManager.default.urls(for: .desktopDirectory, in: .userDomainMask).first!
                 
@@ -134,20 +173,14 @@ struct BatesStampView: View {
                 DispatchQueue.main.async {
                     isProcessing = false
                     
-                    // Hide the app windows immediately so the UI is gone
                     NSApp.hide(nil)
                     
                     // Reveal and select in Finder
                     NSWorkspace.shared.activateFileViewerSelecting([outputURL])
                     
-                    // Trigger rename in Finder after a short delay
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                        triggerFinderRename(for: outputURL)
-                        
-                        // Small delay before termination to ensure script hits
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                            NSApplication.shared.terminate(nil)
-                        }
+                    // Small delay before termination
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                        NSApplication.shared.terminate(nil)
                     }
                 }
             } catch {
@@ -155,31 +188,6 @@ struct BatesStampView: View {
                 DispatchQueue.main.async {
                     isProcessing = false
                 }
-            }
-        }
-    }
-    
-    private func triggerFinderRename(for url: URL) {
-        // More robust AppleScript to trigger rename mode
-        let scriptSource = """
-        tell application "Finder"
-            activate
-            set theItem to POSIX file "\(url.path)" as alias
-            select theItem
-        end tell
-        delay 0.1
-        tell application "System Events"
-            tell process "Finder"
-                keystroke return
-            end tell
-        end tell
-        """
-        
-        if let script = NSAppleScript(source: scriptSource) {
-            var error: NSDictionary?
-            script.executeAndReturnError(&error)
-            if let err = error {
-                print("AppleScript Error: \(err)")
             }
         }
     }

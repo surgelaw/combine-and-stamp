@@ -35,7 +35,7 @@ cat <<EOF > "$CONTENTS/Info.plist"
     <key>NSHighResolutionCapable</key>
     <true/>
     <key>NSAppleEventsUsageDescription</key>
-    <string>This app needs to control Finder to select and rename the generated PDF.</string>
+    <string>This app needs to control Finder to select the generated PDF.</string>
     <key>LSUIElement</key>
     <true/>
 </dict>

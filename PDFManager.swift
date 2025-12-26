@@ -12,27 +12,36 @@ class PDFManager {
         return false
     }
     
+    static func totalFileSize(urls: [URL]) -> Int64 {
+        urls.reduce(0) { total, url in
+            let resources = try? url.resourceValues(forKeys: [.fileSizeKey])
+            return total + Int64(resources?.fileSize ?? 0)
+        }
+    }
+    
     func combineAndStamp(urls: [URL], prefix: String, startingNumber: Int, batesEnabled: Bool, outputURL: URL) throws {
         let destinationDocument = PDFDocument()
         var batesCounter = startingNumber
         
         // Use URLs in the order they are received (respects Finder selection order)
         for url in urls {
-            if let sourceDocument = PDFDocument(url: url) {
-                for i in 0..<sourceDocument.pageCount {
-                    if let page = sourceDocument.page(at: i) {
-                        let stamp = batesEnabled ? "\(prefix)\(String(format: "%06d", batesCounter))" : nil
-                        if let stampedPage = createStampedPage(from: .pdf(page), text: stamp) {
-                            destinationDocument.insert(stampedPage, at: destinationDocument.pageCount)
-                            if batesEnabled { batesCounter += 1 }
+            autoreleasepool {
+                if let sourceDocument = PDFDocument(url: url) {
+                    for i in 0..<sourceDocument.pageCount {
+                        if let page = sourceDocument.page(at: i) {
+                            let stamp = batesEnabled ? "\(prefix)\(String(format: "%06d", batesCounter))" : nil
+                            if let stampedPage = createStampedPage(from: .pdf(page), text: stamp) {
+                                destinationDocument.insert(stampedPage, at: destinationDocument.pageCount)
+                                if batesEnabled { batesCounter += 1 }
+                            }
                         }
                     }
-                }
-            } else if let image = NSImage(contentsOf: url) {
-                let stamp = batesEnabled ? "\(prefix)\(String(format: "%06d", batesCounter))" : nil
-                if let stampedPage = createStampedPage(from: .image(image), text: stamp) {
-                    destinationDocument.insert(stampedPage, at: destinationDocument.pageCount)
-                    if batesEnabled { batesCounter += 1 }
+                } else if let image = NSImage(contentsOf: url) {
+                    let stamp = batesEnabled ? "\(prefix)\(String(format: "%06d", batesCounter))" : nil
+                    if let stampedPage = createStampedPage(from: .image(image), text: stamp) {
+                        destinationDocument.insert(stampedPage, at: destinationDocument.pageCount)
+                        if batesEnabled { batesCounter += 1 }
+                    }
                 }
             }
         }
