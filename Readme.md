@@ -6,6 +6,7 @@ Combine selected PDFs and images into a single PDF and optionally apply a Bates 
 
 ## Installation
 
+1. Download the file from the [Releases](https://github.com/MatthewNuzum/Combine-and-Stamp/releases) page.
 1. Move `PDFCombineStamp.app` into your **Applications** folder.
 2. Double-click **Combine and Stamp**.
 3. When prompted, click **Install** to add the Finder Quick Action.
