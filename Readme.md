@@ -18,8 +18,8 @@ Combine selected PDFs and images into a single PDF and optionally apply a Bates 
    - **Quick Actions**
    - **Combine and Stamp**
 3. Use the pop-up dialog to combine your files and optionally add a Bates stamp.
-[Right click, choose Quick Actions, then choose Combine and Stamp](usage-1.jpeg)
-[Dialog box for the application](usage-2.jpeg)
+![Right click, choose Quick Actions, then choose Combine and Stamp](usage-1.jpeg)
+![Dialog box for the application](usage-2.jpeg)
 
 ## Permissions & Transparency
 
