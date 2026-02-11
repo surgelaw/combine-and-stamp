@@ -1,32 +1,27 @@
-// NOTE: This file should be removed from the main app target.
-// Use Shared/PDFManager.swift instead, which is configured for both
-// the main app and the extension target.
-//
-// If you're seeing this in your build, update your target membership
-// to use Shared/PDFManager.swift
-
 import Foundation
 import PDFKit
 import CoreGraphics
 import AppKit
 
-class PDFManager {
-    static let shared = PDFManager()
+public class PDFManager {
+    public static let shared = PDFManager()
     
-    static func isSupported(url: URL) -> Bool {
+    public init() {}
+    
+    public static func isSupported(url: URL) -> Bool {
         if PDFDocument(url: url) != nil { return true }
         if NSImage(contentsOf: url) != nil { return true }
         return false
     }
     
-    static func totalFileSize(urls: [URL]) -> Int64 {
+    public static func totalFileSize(urls: [URL]) -> Int64 {
         urls.reduce(0) { total, url in
             let resources = try? url.resourceValues(forKeys: [.fileSizeKey])
             return total + Int64(resources?.fileSize ?? 0)
         }
     }
     
-    func combineAndStamp(urls: [URL], prefix: String, startingNumber: Int, batesEnabled: Bool, outputURL: URL) throws {
+    public func combineAndStamp(urls: [URL], prefix: String, startingNumber: Int, batesEnabled: Bool, outputURL: URL) throws {
         let destinationDocument = PDFDocument()
         var batesCounter = startingNumber
         

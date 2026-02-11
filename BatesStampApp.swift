@@ -5,7 +5,16 @@ struct BatesStampApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     var body: some Scene {
-        Settings { } // Dummy scene to prevent default window behavior
+        WindowGroup {
+            ContentView()
+        }
+        .commands {
+            CommandGroup(replacing: .newItem) { }
+        }
+        
+        Settings {
+            EmptyView()
+        }
     }
 }
 
@@ -14,22 +23,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var urls: [URL] = []
     
     func applicationDidFinishLaunching(_ notification: Notification) {
+        // Check if launched with command line arguments (for backwards compatibility)
         let args = ProcessInfo.processInfo.arguments
         if args.count > 1 {
             urls = args.dropFirst().map { URL(fileURLWithPath: $0) }
+            
+            // If we have URLs, show the panel in agent mode
+            if !urls.isEmpty {
+                setupPanel()
+                NSApp.setActivationPolicy(.accessory)
+                NSApp.activate(ignoringOtherApps: true)
+                panel?.makeKeyAndOrderFront(nil)
+            }
         }
-        
-        if urls.isEmpty {
-            NSApplication.shared.terminate(nil)
-            return
-        }
-
-        setupPanel()
-        
-        // Ensure the app and panel come to foreground
-        NSApp.setActivationPolicy(.accessory) // Agent mode
-        NSApp.activate(ignoringOtherApps: true)
-        panel?.makeKeyAndOrderFront(nil)
     }
     
     private func setupPanel() {
@@ -58,6 +64,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
-        return true
+        // Only terminate if we're running with the panel (agent mode)
+        return panel != nil
     }
 }

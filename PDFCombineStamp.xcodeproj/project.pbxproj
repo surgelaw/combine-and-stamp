@@ -1,0 +1,336 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 63;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		237B402C786B706DEBEE9B7F /* PDFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F97BD1F92EB7C32FBC49E9 /* PDFManager.swift */; };
+		3BB90DE100A995BE3B4384E5 /* BatesStampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A214876D4FAC39F16F5637 /* BatesStampView.swift */; };
+		3DCC582B2F3C2C27004E4FDC /* PDFCombineStampExtensionShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC582A2F3C2C27004E4FDC /* PDFCombineStampExtensionShareViewController.swift */; };
+		3DCC582D2F3C2C3C004E4FDC /* PDFCombineStampExtensionExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC582C2F3C2C3C004E4FDC /* PDFCombineStampExtensionExtensionView.swift */; };
+		3DCC58302F3C2C5F004E4FDC /* SharedPDFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC582F2F3C2C5F004E4FDC /* SharedPDFManager.swift */; };
+		3DCC58322F3C2C7B004E4FDC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC58312F3C2C7B004E4FDC /* ContentView.swift */; };
+		A0B528981BA84ADA37ECD184 /* BatesStampApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA6A02AD2BB5EF438AFBACE /* BatesStampApp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2EA6A02AD2BB5EF438AFBACE /* BatesStampApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatesStampApp.swift; sourceTree = "<group>"; };
+		3DCC582A2F3C2C27004E4FDC /* PDFCombineStampExtensionShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFCombineStampExtensionShareViewController.swift; sourceTree = "<group>"; };
+		3DCC582C2F3C2C3C004E4FDC /* PDFCombineStampExtensionExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFCombineStampExtensionExtensionView.swift; sourceTree = "<group>"; };
+		3DCC582E2F3C2C45004E4FDC /* PDFCombineStampExtensionInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PDFCombineStampExtensionInfo.plist; sourceTree = "<group>"; };
+		3DCC582F2F3C2C5F004E4FDC /* SharedPDFManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedPDFManager.swift; sourceTree = "<group>"; };
+		3DCC58312F3C2C7B004E4FDC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3DCC58332F3C2C7F004E4FDC /* PDFCombineStamp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PDFCombineStamp.entitlements; sourceTree = "<group>"; };
+		3DCC58342F3C2C83004E4FDC /* PDFCombineStampExtensionPDFCombineStampExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PDFCombineStampExtensionPDFCombineStampExtension.entitlements; sourceTree = "<group>"; };
+		3DCC58352F3C2CB5004E4FDC /* PROJECT_SETUP.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = PROJECT_SETUP.md; sourceTree = "<group>"; };
+		3DCC58362F3C2CD2004E4FDC /* README 2.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "README 2.md"; sourceTree = "<group>"; };
+		3DCC58372F3C2CFE004E4FDC /* MIGRATION_GUIDE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MIGRATION_GUIDE.md; sourceTree = "<group>"; };
+		3DCC58382F3C2D14004E4FDC /* configure_project.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = configure_project.sh; sourceTree = "<group>"; };
+		3DCC58392F3C2D36004E4FDC /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
+		3DCC583A2F3C2D70004E4FDC /* CHECKLIST.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHECKLIST.md; sourceTree = "<group>"; };
+		3DCC583B2F3C2DAC004E4FDC /* IMPLEMENTATION_SUMMARY.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = IMPLEMENTATION_SUMMARY.md; sourceTree = "<group>"; };
+		3DCC583C2F3C2DD4004E4FDC /* test_extension.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = test_extension.sh; sourceTree = "<group>"; };
+		3DCC583D2F3C2E01004E4FDC /* QUICKSTART.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = QUICKSTART.md; sourceTree = "<group>"; };
+		3DCC583E2F3C2E46004E4FDC /* ARCHITECTURE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ARCHITECTURE.md; sourceTree = "<group>"; };
+		3DCC583F2F3C2E90004E4FDC /* INDEX.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = INDEX.md; sourceTree = "<group>"; };
+		4EFD53D5BB694169CD4DD1E5 /* PDFCombineStamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFCombineStamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0F97BD1F92EB7C32FBC49E9 /* PDFManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFManager.swift; sourceTree = "<group>"; };
+		C7A214876D4FAC39F16F5637 /* BatesStampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatesStampView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		50EBBF74EA8D262A07F70D56 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4EFD53D5BB694169CD4DD1E5 /* PDFCombineStamp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		86EDA8D5192A57908D37B611 = {
+			isa = PBXGroup;
+			children = (
+				2EA6A02AD2BB5EF438AFBACE /* BatesStampApp.swift */,
+				C7A214876D4FAC39F16F5637 /* BatesStampView.swift */,
+				C0F97BD1F92EB7C32FBC49E9 /* PDFManager.swift */,
+				50EBBF74EA8D262A07F70D56 /* Products */,
+				3DCC582A2F3C2C27004E4FDC /* PDFCombineStampExtensionShareViewController.swift */,
+				3DCC582C2F3C2C3C004E4FDC /* PDFCombineStampExtensionExtensionView.swift */,
+				3DCC582E2F3C2C45004E4FDC /* PDFCombineStampExtensionInfo.plist */,
+				3DCC582F2F3C2C5F004E4FDC /* SharedPDFManager.swift */,
+				3DCC58312F3C2C7B004E4FDC /* ContentView.swift */,
+				3DCC58332F3C2C7F004E4FDC /* PDFCombineStamp.entitlements */,
+				3DCC58342F3C2C83004E4FDC /* PDFCombineStampExtensionPDFCombineStampExtension.entitlements */,
+				3DCC58352F3C2CB5004E4FDC /* PROJECT_SETUP.md */,
+				3DCC58362F3C2CD2004E4FDC /* README 2.md */,
+				3DCC58372F3C2CFE004E4FDC /* MIGRATION_GUIDE.md */,
+				3DCC58382F3C2D14004E4FDC /* configure_project.sh */,
+				3DCC58392F3C2D36004E4FDC /* build.sh */,
+				3DCC583A2F3C2D70004E4FDC /* CHECKLIST.md */,
+				3DCC583B2F3C2DAC004E4FDC /* IMPLEMENTATION_SUMMARY.md */,
+				3DCC583C2F3C2DD4004E4FDC /* test_extension.sh */,
+				3DCC583D2F3C2E01004E4FDC /* QUICKSTART.md */,
+				3DCC583E2F3C2E46004E4FDC /* ARCHITECTURE.md */,
+				3DCC583F2F3C2E90004E4FDC /* INDEX.md */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8B7A1F353310FF4DF21E22A3 /* PDFCombineStamp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1215ED4CD709B00C56828D8 /* Build configuration list for PBXNativeTarget "PDFCombineStamp" */;
+			buildPhases = (
+				408CECC3A4A6E96E81E6BF91 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PDFCombineStamp;
+			packageProductDependencies = (
+			);
+			productName = PDFCombineStamp;
+			productReference = 4EFD53D5BB694169CD4DD1E5 /* PDFCombineStamp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8B2A46D6CE89C299815E5960 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					8B7A1F353310FF4DF21E22A3 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 406AB48496788D29C368013D /* Build configuration list for PBXProject "PDFCombineStamp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 86EDA8D5192A57908D37B611;
+			minimizedProjectReferenceProxies = 1;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8B7A1F353310FF4DF21E22A3 /* PDFCombineStamp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		408CECC3A4A6E96E81E6BF91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0B528981BA84ADA37ECD184 /* BatesStampApp.swift in Sources */,
+				3DCC582D2F3C2C3C004E4FDC /* PDFCombineStampExtensionExtensionView.swift in Sources */,
+				3DCC58322F3C2C7B004E4FDC /* ContentView.swift in Sources */,
+				3BB90DE100A995BE3B4384E5 /* BatesStampView.swift in Sources */,
+				3DCC58302F3C2C5F004E4FDC /* SharedPDFManager.swift in Sources */,
+				237B402C786B706DEBEE9B7F /* PDFManager.swift in Sources */,
+				3DCC582B2F3C2C27004E4FDC /* PDFCombineStampExtensionShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		260692A8D9E0E049F740513C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = PDFCombineStamp;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "This app needs to control Finder to select the generated PDF.";
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.user.pdfcombinestamp;
+				PRODUCT_NAME = PDFCombineStamp;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4B57D688BB00F3B59D0B02CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = PDFCombineStamp;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "This app needs to control Finder to select the generated PDF.";
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.user.pdfcombinestamp;
+				PRODUCT_NAME = PDFCombineStamp;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		ACD0962230151F56AC1C1DBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F1FCDB8E116D57A98115C134 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		406AB48496788D29C368013D /* Build configuration list for PBXProject "PDFCombineStamp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				260692A8D9E0E049F740513C /* Debug */,
+				4B57D688BB00F3B59D0B02CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C1215ED4CD709B00C56828D8 /* Build configuration list for PBXNativeTarget "PDFCombineStamp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1FCDB8E116D57A98115C134 /* Debug */,
+				ACD0962230151F56AC1C1DBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8B2A46D6CE89C299815E5960 /* Project object */;
+}

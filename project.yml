@@ -1,0 +1,31 @@
+name: PDFCombineStamp
+options:
+  deploymentTarget:
+    macOS: "12.0"
+configs:
+  Debug: debug
+  Release: release
+settings:
+  base:
+    PRODUCT_NAME: PDFCombineStamp
+    PRODUCT_BUNDLE_IDENTIFIER: com.user.pdfcombinestamp
+    SWIFT_VERSION: 5.0
+    MACOSX_DEPLOYMENT_TARGET: 12.0
+    CODE_SIGN_STYLE: Automatic
+    ENABLE_HARDENED_RUNTIME: YES
+    ARCHS: "$(ARCHS_STANDARD)"
+    GENERATE_INFOPLIST_FILE: YES
+    INFOPLIST_KEY_CFBundleDisplayName: PDFCombineStamp
+    INFOPLIST_KEY_LSUIElement: YES
+    INFOPLIST_KEY_NSAppleEventsUsageDescription: "This app needs to control Finder to select the generated PDF."
+targets:
+  PDFCombineStamp:
+    type: application
+    platform: macOS
+    sources:
+      - BatesStampApp.swift
+      - BatesStampView.swift
+      - PDFManager.swift
+    scheme:
+      testTargets: []
+      gatherCoverageData: false

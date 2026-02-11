@@ -1,7 +1,10 @@
 import SwiftUI
 
-struct BatesStampView: View {
+struct ExtensionView: View {
     let urls: [URL]
+    let onComplete: (URL?) -> Void
+    let onCancel: () -> Void
+    
     @State private var prefix: String = "BATES-"
     @State private var startingNumber: Int = 1
     @State private var isBatesEnabled: Bool = true
@@ -114,7 +117,7 @@ struct BatesStampView: View {
                 Spacer()
                 
                 Button("Cancel") {
-                    NSApplication.shared.terminate(nil)
+                    onCancel()
                 }
                 .keyboardShortcut(.cancelAction)
                 .font(.body)
@@ -171,21 +174,13 @@ struct BatesStampView: View {
                 
                 DispatchQueue.main.async {
                     isProcessing = false
-                    
-                    NSApp.hide(nil)
-                    
-                    // Reveal and select in Finder
-                    NSWorkspace.shared.activateFileViewerSelecting([outputURL])
-                    
-                    // Small delay before termination
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                        NSApplication.shared.terminate(nil)
-                    }
+                    onComplete(outputURL)
                 }
             } catch {
                 print("Error: \(error)")
                 DispatchQueue.main.async {
                     isProcessing = false
+                    onComplete(nil)
                 }
             }
         }

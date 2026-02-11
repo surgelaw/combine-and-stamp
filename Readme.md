@@ -11,6 +11,37 @@ Combine selected PDFs and images into a single PDF and optionally apply a Bates 
 2. Double-click **Combine and Stamp**.
 3. When prompted, click **Install** to add the Finder Quick Action.
 
+## Build and Release (Xcode)
+
+This repo now includes a repeatable release pipeline for universal macOS binaries plus optional signing/notarization.
+
+1. Install Xcode and `xcodegen`:
+   - `brew install xcodegen`
+2. Generate the project:
+   - `./scripts/bootstrap_project.sh`
+3. Build/package:
+   - `VERSION=1.2.0 ./scripts/release.sh`
+
+Artifacts are written to `build/release/`:
+- `Combine-and-Stamp-<version>.zip` (app bundle zip)
+- `Combine-and-Stamp-<version>[-unsigned].pkg` (installer package)
+
+Optional signing/notarization inputs:
+- `DEVELOPMENT_TEAM` for Xcode automatic signing
+- `APP_SIGN_IDENTITY` for explicit app codesign
+- `PKG_SIGN_IDENTITY` for signed installer
+- `NOTARY_KEYCHAIN_PROFILE` for `notarytool submit --wait`
+
+Example:
+
+```bash
+DEVELOPMENT_TEAM=ABCDE12345 \
+PKG_SIGN_IDENTITY="Developer ID Installer: Example, Inc. (ABCDE12345)" \
+NOTARY_KEYCHAIN_PROFILE=notary-profile \
+VERSION=1.2.0 \
+./scripts/release.sh
+```
+
 ## Usage
 
 1. In Finder, select multiple files (PDFs and images are supported).
