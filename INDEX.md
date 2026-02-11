@@ -31,6 +31,15 @@ Welcome to the PDF Combine & Stamp project documentation! This index will help y
 | Source Code | Implementation | Daily coding |
 | [`test_extension.sh`](test_extension.sh) | Testing tools | Testing features |
 
+### Planning & Roadmap
+| Document | What's Inside | When to Use |
+|----------|---------------|-------------|
+| [`PRODUCT_ROADMAP.md`](PRODUCT_ROADMAP.md) | Feature priorities & versions | Planning features |
+| [`V1.1_SUMMARY.md`](V1.1_SUMMARY.md) | v1.1 overview | Understanding v1.1 |
+| [`V1.1_IMPLEMENTATION_PLAN.md`](V1.1_IMPLEMENTATION_PLAN.md) | Detailed v1.1 specs | Building v1.1 |
+| [`V1.1_QUICK_REFERENCE.md`](V1.1_QUICK_REFERENCE.md) | v1.1 at-a-glance | Quick lookup |
+| [`V1.1_GETTING_STARTED.md`](V1.1_GETTING_STARTED.md) | Step-by-step guide | Starting v1.1 dev |
+
 ### Building & Distribution
 | Document | What's Inside | When to Use |
 |----------|---------------|-------------|
@@ -64,6 +73,13 @@ Welcome to the PDF Combine & Stamp project documentation! This index will help y
 - **Overview**: [`IMPLEMENTATION_SUMMARY.md`](IMPLEMENTATION_SUMMARY.md)
 - **Visual Diagrams**: [`ARCHITECTURE.md`](ARCHITECTURE.md)
 - **Component Details**: [`PROJECT_SETUP.md`](PROJECT_SETUP.md)
+
+### Product Planning
+- **Feature Roadmap**: [`PRODUCT_ROADMAP.md`](PRODUCT_ROADMAP.md)
+- **v1.1 Summary**: [`V1.1_SUMMARY.md`](V1.1_SUMMARY.md)
+- **v1.1 Implementation**: [`V1.1_IMPLEMENTATION_PLAN.md`](V1.1_IMPLEMENTATION_PLAN.md)
+- **v1.1 Quick Reference**: [`V1.1_QUICK_REFERENCE.md`](V1.1_QUICK_REFERENCE.md)
+- **v1.1 Getting Started**: [`V1.1_GETTING_STARTED.md`](V1.1_GETTING_STARTED.md)
 
 ### Setup & Configuration
 - **Quick Start**: [`QUICKSTART.md`](QUICKSTART.md)

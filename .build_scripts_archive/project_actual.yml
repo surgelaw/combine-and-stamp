@@ -18,25 +18,18 @@ targets:
       # Main app files
       - BatesStampApp.swift
       - BatesStampView.swift
-      - ContentView.swift
+      - ContentView 2.swift
       # Shared PDF manager
       - SharedPDFManager.swift
       # v1.1 files
-      - FileItem.swift
-      - FileValidator.swift
-      - DropZoneView.swift
-      - FileListView.swift
       - FileRowView.swift
       - ReorderableFileListView.swift
     settings:
       PRODUCT_BUNDLE_IDENTIFIER: com.yourcompany.PDFCombineStamp
       CODE_SIGN_STYLE: Automatic
       ENABLE_HARDENED_RUNTIME: YES
-      GENERATE_INFOPLIST_FILE: YES
       INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.utilities
       INFOPLIST_KEY_CFBundleDisplayName: "PDF Combine & Stamp"
-      INFOPLIST_KEY_NSHumanReadableCopyright: "Copyright © 2026"
-      INFOPLIST_KEY_LSMinimumSystemVersion: "13.0"
     dependencies:
       - target: PDFCombineStampExtension
         embed: true
@@ -55,9 +48,6 @@ targets:
       CODE_SIGN_STYLE: Automatic
       ENABLE_HARDENED_RUNTIME: YES
       SKIP_INSTALL: NO
-      GENERATE_INFOPLIST_FILE: YES
-      INFOPLIST_KEY_CFBundleDisplayName: "Combine PDFs and Stamp"
-      INFOPLIST_KEY_NSExtensionPointIdentifier: com.apple.services
 
 schemes:
   PDFCombineStamp:

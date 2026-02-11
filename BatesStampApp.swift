@@ -25,17 +25,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         // Check if launched with command line arguments (for backwards compatibility)
         let args = ProcessInfo.processInfo.arguments
-        if args.count > 1 {
-            urls = args.dropFirst().map { URL(fileURLWithPath: $0) }
-            
-            // If we have URLs, show the panel in agent mode
-            if !urls.isEmpty {
-                setupPanel()
-                NSApp.setActivationPolicy(.accessory)
-                NSApp.activate(ignoringOtherApps: true)
-                panel?.makeKeyAndOrderFront(nil)
-            }
+        
+        // Filter out Xcode debug arguments and the executable path
+        let fileArgs = args.dropFirst().filter { arg in
+            // Skip Xcode debug flags
+            !arg.hasPrefix("-") && !arg.hasPrefix("NS")
         }
+        
+        if !fileArgs.isEmpty {
+            urls = fileArgs.map { URL(fileURLWithPath: $0) }
+            
+            // If we have actual file URLs, show the panel in agent mode
+            setupPanel()
+            NSApp.setActivationPolicy(.accessory)
+            NSApp.activate(ignoringOtherApps: true)
+            panel?.makeKeyAndOrderFront(nil)
+        }
+        // Otherwise, the default WindowGroup shows ContentView
     }
     
     private func setupPanel() {

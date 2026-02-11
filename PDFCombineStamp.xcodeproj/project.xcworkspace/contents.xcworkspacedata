@@ -4,4 +4,7 @@
    <FileRef
       location = "self:">
    </FileRef>
+   <FileRef
+      location = "group:RUNNING_TOTAL_FEATURE.md">
+   </FileRef>
 </Workspace>

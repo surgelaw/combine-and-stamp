@@ -8,6 +8,12 @@ struct BatesStampView: View {
     @State private var isProcessing: Bool = false
     @State private var forceProceed: Bool = false
     
+    // Presets
+    @StateObject private var presetManager = PresetManager()
+    @State private var showingPresetPicker = false
+    @State private var showingPresetSaver = false
+    @State private var currentPresetId: UUID? // Track which preset is currently loaded
+    
     private var supportedURLs: [URL] {
         urls.filter { PDFManager.isSupported(url: $0) }
     }
@@ -85,6 +91,39 @@ struct BatesStampView: View {
             }
             
             Form {
+                // Presets Section
+                Section {
+                    Button {
+                        showingPresetPicker = true
+                    } label: {
+                        HStack {
+                            Image(systemName: "bookmark")
+                            Text("Load Preset")
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                        }
+                    }
+                    .buttonStyle(.plain)
+                    .help("Load a saved preset configuration")
+                    
+                    Button {
+                        showingPresetSaver = true
+                    } label: {
+                        HStack {
+                            Image(systemName: "bookmark.fill")
+                            Text("Save as Preset")
+                            Spacer()
+                        }
+                    }
+                    .buttonStyle(.plain)
+                    .help("Save current settings as a new preset")
+                }
+                .padding()
+                
+                Divider()
+                
                 Section {
                     Toggle("Add Bates Stamp", isOn: $isBatesEnabled)
                         .font(.body)
@@ -98,8 +137,28 @@ struct BatesStampView: View {
                             .font(.body)
                     }
                 }
+                .padding()
             }
-            .padding(.top, -10)
+            .formStyle(.grouped)
+            .sheet(isPresented: $showingPresetPicker) {
+                PresetPickerView(
+                    presetManager: presetManager,
+                    selectedPreset: Binding<StampPreset?>(
+                        get: { nil },
+                        set: { (preset: StampPreset?) in
+                            if let preset = preset {
+                                loadPreset(preset)
+                            }
+                        }
+                    )
+                )
+            }
+            .sheet(isPresented: $showingPresetSaver) {
+                PresetEditorView(
+                    presetManager: presetManager,
+                    preset: nil as StampPreset?
+                )
+            }
             
             Divider()
             
@@ -130,7 +189,7 @@ struct BatesStampView: View {
             .padding()
             .background(Color(NSColor.windowBackgroundColor))
         }
-        .frame(width: 440)
+        .frame(minWidth: 440, maxWidth: 440, minHeight: 350)
         .overlay {
             if isProcessing {
                 ZStack {
@@ -149,9 +208,22 @@ struct BatesStampView: View {
         }
     }
     
+    // MARK: - Preset Management
+    
+    private func loadPreset(_ preset: StampPreset) {
+        prefix = preset.prefix
+        startingNumber = preset.suggestedStartingNumber // Use the running total
+        isBatesEnabled = preset.isBatesEnabled
+        currentPresetId = preset.id // Track which preset is loaded
+    }
+    
+    // MARK: - File Processing
+    
     func processFiles() {
         isProcessing = true
         let filesToProcess = supportedURLs
+        let startNum = startingNumber // Capture the starting number used
+        let presetId = currentPresetId // Capture preset ID
         
         DispatchQueue.global(qos: .userInitiated).async {
             do {
@@ -161,15 +233,27 @@ struct BatesStampView: View {
                 let name = "Combined_\(Int(Date().timeIntervalSince1970)).pdf"
                 let outputURL = outputDirectory.appendingPathComponent(name)
                 
+                // Get total page count for running total
+                let totalPages = self.getTotalPageCount(for: filesToProcess)
+                
                 try PDFManager.shared.combineAndStamp(
                     urls: filesToProcess,
                     prefix: prefix,
-                    startingNumber: startingNumber,
+                    startingNumber: startNum,
                     batesEnabled: isBatesEnabled,
                     outputURL: outputURL
                 )
                 
                 DispatchQueue.main.async {
+                    // Record preset usage if a preset was loaded
+                    if let presetId = presetId, totalPages > 0 {
+                        self.presetManager.recordPresetUsage(
+                            presetId: presetId,
+                            startNumber: startNum,
+                            pageCount: totalPages
+                        )
+                    }
+                    
                     isProcessing = false
                     
                     NSApp.hide(nil)
@@ -189,5 +273,16 @@ struct BatesStampView: View {
                 }
             }
         }
+    }
+    
+    /// Get total page count for all files
+    private func getTotalPageCount(for urls: [URL]) -> Int {
+        var total = 0
+        for url in urls {
+            if let pageCount = FileValidator.getPageCount(url) {
+                total += pageCount
+            }
+        }
+        return total
     }
 }

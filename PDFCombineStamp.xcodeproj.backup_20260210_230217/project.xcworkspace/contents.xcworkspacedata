@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "self:">
+   </FileRef>
+   <FileRef
+      location = "group:V1.1_IMPLEMENTATION_PLAN.md">
+   </FileRef>
+   <FileRef
+      location = "group:V1.1_QUICK_REFERENCE.md">
+   </FileRef>
+   <FileRef
+      location = "group:V1.1_GETTING_STARTED.md">
+   </FileRef>
+   <FileRef
+      location = "group:V1.1_SUMMARY.md">
+   </FileRef>
+   <FileRef
+      location = "group:V1.1_CHECKLIST.md">
+   </FileRef>
+   <FileRef
+      location = "group:FileItem.swift">
+   </FileRef>
+   <FileRef
+      location = "group:FileValidator.swift">
+   </FileRef>
+   <FileRef
+      location = "group:DropZoneView.swift">
+   </FileRef>
+   <FileRef
+      location = "group:FileListView.swift">
+   </FileRef>
+   <FileRef
+      location = "group:V1.1_PROGRESS.md">
+   </FileRef>
+   <FileRef
+      location = "group:XCODE_SETUP_INSTRUCTIONS.md">
+   </FileRef>
+   <FileRef
+      location = "group:BUILD_ERROR_FIX.md">
+   </FileRef>
+   <FileRef
+      location = "group:MACOS_VERSION_FIX.md">
+   </FileRef>
+   <FileRef
+      location = "group:BUILD_ISSUES_SUMMARY.md">
+   </FileRef>
+   <FileRef
+      location = "group:BUG_FIXES_V1.1.md">
+   </FileRef>
+   <FileRef
+      location = "group:FIXES_SUMMARY.md">
+   </FileRef>
+   <FileRef
+      location = "group:FRAME_ERROR_FIX.md">
+   </FileRef>
+   <FileRef
+      location = "group:LAUNCH_BEHAVIOR.md">
+   </FileRef>
+   <FileRef
+      location = "group:XCODE_LAUNCH_FIX.md">
+   </FileRef>
+</Workspace>

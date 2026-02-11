@@ -7,40 +7,75 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0989BB26AA47372055A15F05 /* FileRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03540E536C6921F0768879 /* FileRowView.swift */; };
+		1173F5B9259FB72E542B4857 /* FileListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B6E175623ED3ED2AD0E02 /* FileListView.swift */; };
 		3BB90DE100A995BE3B4384E5 /* BatesStampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A214876D4FAC39F16F5637 /* BatesStampView.swift */; };
-		3DCC582B2F3C2C27004E4FDC /* PDFCombineStampExtensionShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC582A2F3C2C27004E4FDC /* PDFCombineStampExtensionShareViewController.swift */; };
-		3DCC582D2F3C2C3C004E4FDC /* PDFCombineStampExtensionExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC582C2F3C2C3C004E4FDC /* PDFCombineStampExtensionExtensionView.swift */; };
-		3DCC58302F3C2C5F004E4FDC /* SharedPDFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC582F2F3C2C5F004E4FDC /* SharedPDFManager.swift */; };
-		3DCC58322F3C2C7B004E4FDC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC58312F3C2C7B004E4FDC /* ContentView.swift */; };
+		3DCC587F2F3CC2D6004E4FDC /* PresetEditorView 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC587B2F3CC2D6004E4FDC /* PresetEditorView 2.swift */; };
+		3DCC58802F3CC2D6004E4FDC /* PresetManager 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC587C2F3CC2D6004E4FDC /* PresetManager 2.swift */; };
+		3DCC58812F3CC2D6004E4FDC /* PresetPickerView 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC587D2F3CC2D6004E4FDC /* PresetPickerView 2.swift */; };
+		3DCC58822F3CC2D6004E4FDC /* StampPreset 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC587E2F3CC2D6004E4FDC /* StampPreset 2.swift */; };
+		3DCC58832F3CC2D6004E4FDC /* PresetEditorView 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC587B2F3CC2D6004E4FDC /* PresetEditorView 2.swift */; };
+		3DCC58842F3CC2D6004E4FDC /* PresetManager 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC587C2F3CC2D6004E4FDC /* PresetManager 2.swift */; };
+		3DCC58852F3CC2D6004E4FDC /* PresetPickerView 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC587D2F3CC2D6004E4FDC /* PresetPickerView 2.swift */; };
+		3DCC58862F3CC2D6004E4FDC /* StampPreset 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC587E2F3CC2D6004E4FDC /* StampPreset 2.swift */; };
+		5C26109CB7D58BE53A56F719 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9378EF120A1504224EAE73 /* ContentView.swift */; };
+		6714F17DC8531376A5BAFDF9 /* FileValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEF3258DD65D30C6F28D789 /* FileValidator.swift */; };
+		684E7870E98A065D94EBCF6D /* SharedPDFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3512EA5E885BE4F2FCF89DB1 /* SharedPDFManager.swift */; };
+		80447F375D9EE262D435AB6F /* DropZoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15978E3B5E8B22D49897E254 /* DropZoneView.swift */; };
+		86E04EE8EB8209A0AD73BB7B /* PDFCombineStampExtensionExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2327AF1440BB8543CC8891A /* PDFCombineStampExtensionExtensionView.swift */; };
 		A0B528981BA84ADA37ECD184 /* BatesStampApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA6A02AD2BB5EF438AFBACE /* BatesStampApp.swift */; };
+		B4A072CE2184B361526C0D52 /* PDFCombineStampExtensionShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56F197D13B856BBA0CA59 /* PDFCombineStampExtensionShareViewController.swift */; };
+		BB6C30D340E355402A4140B4 /* FileItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D921BCBD7DA59BC71CA0306F /* FileItem.swift */; };
+		C1E96781375BA48CACE46647 /* ReorderableFileListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4ED65645DB9702A445A08 /* ReorderableFileListView.swift */; };
+		D19B3A6525B2362CA986E1A0 /* SharedPDFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3512EA5E885BE4F2FCF89DB1 /* SharedPDFManager.swift */; };
+		D50FD6D0B509B2E77673B5EA /* PDFCombineStampExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E39B3B28EC53987A0EC7B457 /* PDFCombineStampExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C42E0C4846E73BA61A0C3E4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B2A46D6CE89C299815E5960 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86EF296E3FFE4CBA3F50A32D;
+			remoteInfo = PDFCombineStampExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FE87194559294FEC32353002 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D50FD6D0B509B2E77673B5EA /* PDFCombineStampExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		15978E3B5E8B22D49897E254 /* DropZoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropZoneView.swift; sourceTree = "<group>"; };
+		1BF4ED65645DB9702A445A08 /* ReorderableFileListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReorderableFileListView.swift; sourceTree = "<group>"; };
 		2EA6A02AD2BB5EF438AFBACE /* BatesStampApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatesStampApp.swift; sourceTree = "<group>"; };
-		3DCC582A2F3C2C27004E4FDC /* PDFCombineStampExtensionShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFCombineStampExtensionShareViewController.swift; sourceTree = "<group>"; };
-		3DCC582C2F3C2C3C004E4FDC /* PDFCombineStampExtensionExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFCombineStampExtensionExtensionView.swift; sourceTree = "<group>"; };
-		3DCC582E2F3C2C45004E4FDC /* PDFCombineStampExtensionInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PDFCombineStampExtensionInfo.plist; sourceTree = "<group>"; };
-		3DCC582F2F3C2C5F004E4FDC /* SharedPDFManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedPDFManager.swift; sourceTree = "<group>"; };
-		3DCC58312F3C2C7B004E4FDC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		3DCC58332F3C2C7F004E4FDC /* PDFCombineStamp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PDFCombineStamp.entitlements; sourceTree = "<group>"; };
-		3DCC58342F3C2C83004E4FDC /* PDFCombineStampExtensionPDFCombineStampExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PDFCombineStampExtensionPDFCombineStampExtension.entitlements; sourceTree = "<group>"; };
-		3DCC58352F3C2CB5004E4FDC /* PROJECT_SETUP.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = PROJECT_SETUP.md; sourceTree = "<group>"; };
-		3DCC58362F3C2CD2004E4FDC /* README 2.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "README 2.md"; sourceTree = "<group>"; };
-		3DCC58372F3C2CFE004E4FDC /* MIGRATION_GUIDE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MIGRATION_GUIDE.md; sourceTree = "<group>"; };
-		3DCC58382F3C2D14004E4FDC /* configure_project.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = configure_project.sh; sourceTree = "<group>"; };
-		3DCC58392F3C2D36004E4FDC /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
-		3DCC583A2F3C2D70004E4FDC /* CHECKLIST.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHECKLIST.md; sourceTree = "<group>"; };
-		3DCC583B2F3C2DAC004E4FDC /* IMPLEMENTATION_SUMMARY.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = IMPLEMENTATION_SUMMARY.md; sourceTree = "<group>"; };
-		3DCC583C2F3C2DD4004E4FDC /* test_extension.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = test_extension.sh; sourceTree = "<group>"; };
-		3DCC583D2F3C2E01004E4FDC /* QUICKSTART.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = QUICKSTART.md; sourceTree = "<group>"; };
-		3DCC583E2F3C2E46004E4FDC /* ARCHITECTURE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ARCHITECTURE.md; sourceTree = "<group>"; };
-		3DCC583F2F3C2E90004E4FDC /* INDEX.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = INDEX.md; sourceTree = "<group>"; };
-		3DCC58402F3C3042004E4FDC /* BUILD_ERROR_FIXES.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = BUILD_ERROR_FIXES.md; sourceTree = "<group>"; };
-		3DCC58412F3C332C004E4FDC /* INSTALLATION_GUIDE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = INSTALLATION_GUIDE.md; sourceTree = "<group>"; };
-		3DCC58422F3C3345004E4FDC /* install-local.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-local.sh"; sourceTree = "<group>"; };
-		3DCC58432F3C3369004E4FDC /* QUICK_INSTALL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = QUICK_INSTALL.md; sourceTree = "<group>"; };
+		3512EA5E885BE4F2FCF89DB1 /* SharedPDFManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedPDFManager.swift; sourceTree = "<group>"; };
+		3DCC58792F3CC183004E4FDC /* PDFCombineStamp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PDFCombineStamp.entitlements; sourceTree = "<group>"; };
+		3DCC587A2F3CC1FA004E4FDC /* PDFCombineStampExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PDFCombineStampExtension.entitlements; sourceTree = "<group>"; };
+		3DCC587B2F3CC2D6004E4FDC /* PresetEditorView 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PresetEditorView 2.swift"; sourceTree = "<group>"; };
+		3DCC587C2F3CC2D6004E4FDC /* PresetManager 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PresetManager 2.swift"; sourceTree = "<group>"; };
+		3DCC587D2F3CC2D6004E4FDC /* PresetPickerView 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PresetPickerView 2.swift"; sourceTree = "<group>"; };
+		3DCC587E2F3CC2D6004E4FDC /* StampPreset 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StampPreset 2.swift"; sourceTree = "<group>"; };
 		4EFD53D5BB694169CD4DD1E5 /* PDFCombineStamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFCombineStamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C9378EF120A1504224EAE73 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7FEF3258DD65D30C6F28D789 /* FileValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileValidator.swift; sourceTree = "<group>"; };
+		A2327AF1440BB8543CC8891A /* PDFCombineStampExtensionExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFCombineStampExtensionExtensionView.swift; sourceTree = "<group>"; };
+		BF1B6E175623ED3ED2AD0E02 /* FileListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileListView.swift; sourceTree = "<group>"; };
 		C7A214876D4FAC39F16F5637 /* BatesStampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatesStampView.swift; sourceTree = "<group>"; };
+		CEE56F197D13B856BBA0CA59 /* PDFCombineStampExtensionShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFCombineStampExtensionShareViewController.swift; sourceTree = "<group>"; };
+		D921BCBD7DA59BC71CA0306F /* FileItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileItem.swift; sourceTree = "<group>"; };
+		E39B3B28EC53987A0EC7B457 /* PDFCombineStampExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PDFCombineStampExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF03540E536C6921F0768879 /* FileRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -48,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				4EFD53D5BB694169CD4DD1E5 /* PDFCombineStamp.app */,
+				E39B3B28EC53987A0EC7B457 /* PDFCombineStampExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,46 +91,59 @@
 		86EDA8D5192A57908D37B611 = {
 			isa = PBXGroup;
 			children = (
+				3DCC587B2F3CC2D6004E4FDC /* PresetEditorView 2.swift */,
+				3DCC587C2F3CC2D6004E4FDC /* PresetManager 2.swift */,
+				3DCC587D2F3CC2D6004E4FDC /* PresetPickerView 2.swift */,
+				3DCC587E2F3CC2D6004E4FDC /* StampPreset 2.swift */,
+				3DCC587A2F3CC1FA004E4FDC /* PDFCombineStampExtension.entitlements */,
+				3DCC58792F3CC183004E4FDC /* PDFCombineStamp.entitlements */,
 				2EA6A02AD2BB5EF438AFBACE /* BatesStampApp.swift */,
 				C7A214876D4FAC39F16F5637 /* BatesStampView.swift */,
+				7C9378EF120A1504224EAE73 /* ContentView.swift */,
+				15978E3B5E8B22D49897E254 /* DropZoneView.swift */,
+				D921BCBD7DA59BC71CA0306F /* FileItem.swift */,
+				BF1B6E175623ED3ED2AD0E02 /* FileListView.swift */,
+				EF03540E536C6921F0768879 /* FileRowView.swift */,
+				7FEF3258DD65D30C6F28D789 /* FileValidator.swift */,
+				A2327AF1440BB8543CC8891A /* PDFCombineStampExtensionExtensionView.swift */,
+				CEE56F197D13B856BBA0CA59 /* PDFCombineStampExtensionShareViewController.swift */,
+				1BF4ED65645DB9702A445A08 /* ReorderableFileListView.swift */,
+				3512EA5E885BE4F2FCF89DB1 /* SharedPDFManager.swift */,
 				50EBBF74EA8D262A07F70D56 /* Products */,
-				3DCC582A2F3C2C27004E4FDC /* PDFCombineStampExtensionShareViewController.swift */,
-				3DCC582C2F3C2C3C004E4FDC /* PDFCombineStampExtensionExtensionView.swift */,
-				3DCC582E2F3C2C45004E4FDC /* PDFCombineStampExtensionInfo.plist */,
-				3DCC582F2F3C2C5F004E4FDC /* SharedPDFManager.swift */,
-				3DCC58312F3C2C7B004E4FDC /* ContentView.swift */,
-				3DCC58332F3C2C7F004E4FDC /* PDFCombineStamp.entitlements */,
-				3DCC58342F3C2C83004E4FDC /* PDFCombineStampExtensionPDFCombineStampExtension.entitlements */,
-				3DCC58352F3C2CB5004E4FDC /* PROJECT_SETUP.md */,
-				3DCC58362F3C2CD2004E4FDC /* README 2.md */,
-				3DCC58372F3C2CFE004E4FDC /* MIGRATION_GUIDE.md */,
-				3DCC58382F3C2D14004E4FDC /* configure_project.sh */,
-				3DCC58392F3C2D36004E4FDC /* build.sh */,
-				3DCC583A2F3C2D70004E4FDC /* CHECKLIST.md */,
-				3DCC583B2F3C2DAC004E4FDC /* IMPLEMENTATION_SUMMARY.md */,
-				3DCC583C2F3C2DD4004E4FDC /* test_extension.sh */,
-				3DCC583D2F3C2E01004E4FDC /* QUICKSTART.md */,
-				3DCC583E2F3C2E46004E4FDC /* ARCHITECTURE.md */,
-				3DCC583F2F3C2E90004E4FDC /* INDEX.md */,
-				3DCC58402F3C3042004E4FDC /* BUILD_ERROR_FIXES.md */,
-				3DCC58412F3C332C004E4FDC /* INSTALLATION_GUIDE.md */,
-				3DCC58422F3C3345004E4FDC /* install-local.sh */,
-				3DCC58432F3C3369004E4FDC /* QUICK_INSTALL.md */,
 			);
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		86EF296E3FFE4CBA3F50A32D /* PDFCombineStampExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F164387A7B71E53DECD4BCD /* Build configuration list for PBXNativeTarget "PDFCombineStampExtension" */;
+			buildPhases = (
+				71B15F4AE24BD958C870C222 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PDFCombineStampExtension;
+			packageProductDependencies = (
+			);
+			productName = PDFCombineStampExtension;
+			productReference = E39B3B28EC53987A0EC7B457 /* PDFCombineStampExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		8B7A1F353310FF4DF21E22A3 /* PDFCombineStamp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C1215ED4CD709B00C56828D8 /* Build configuration list for PBXNativeTarget "PDFCombineStamp" */;
 			buildPhases = (
 				408CECC3A4A6E96E81E6BF91 /* Sources */,
+				FE87194559294FEC32353002 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1854E2073B070373E95AA5FF /* PBXTargetDependency */,
 			);
 			name = PDFCombineStamp;
 			packageProductDependencies = (
@@ -112,6 +161,9 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
+					86EF296E3FFE4CBA3F50A32D = {
+						ProvisioningStyle = Automatic;
+					};
 					8B7A1F353310FF4DF21E22A3 = {
 						ProvisioningStyle = Automatic;
 					};
@@ -131,6 +183,7 @@
 			projectRoot = "";
 			targets = (
 				8B7A1F353310FF4DF21E22A3 /* PDFCombineStamp */,
+				86EF296E3FFE4CBA3F50A32D /* PDFCombineStampExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -141,22 +194,51 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0B528981BA84ADA37ECD184 /* BatesStampApp.swift in Sources */,
-				3DCC582D2F3C2C3C004E4FDC /* PDFCombineStampExtensionExtensionView.swift in Sources */,
-				3DCC58322F3C2C7B004E4FDC /* ContentView.swift in Sources */,
 				3BB90DE100A995BE3B4384E5 /* BatesStampView.swift in Sources */,
-				3DCC58302F3C2C5F004E4FDC /* SharedPDFManager.swift in Sources */,
-				3DCC582B2F3C2C27004E4FDC /* PDFCombineStampExtensionShareViewController.swift in Sources */,
+				5C26109CB7D58BE53A56F719 /* ContentView.swift in Sources */,
+				80447F375D9EE262D435AB6F /* DropZoneView.swift in Sources */,
+				BB6C30D340E355402A4140B4 /* FileItem.swift in Sources */,
+				1173F5B9259FB72E542B4857 /* FileListView.swift in Sources */,
+				0989BB26AA47372055A15F05 /* FileRowView.swift in Sources */,
+				6714F17DC8531376A5BAFDF9 /* FileValidator.swift in Sources */,
+				3DCC587F2F3CC2D6004E4FDC /* PresetEditorView 2.swift in Sources */,
+				3DCC58802F3CC2D6004E4FDC /* PresetManager 2.swift in Sources */,
+				3DCC58812F3CC2D6004E4FDC /* PresetPickerView 2.swift in Sources */,
+				3DCC58822F3CC2D6004E4FDC /* StampPreset 2.swift in Sources */,
+				C1E96781375BA48CACE46647 /* ReorderableFileListView.swift in Sources */,
+				684E7870E98A065D94EBCF6D /* SharedPDFManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71B15F4AE24BD958C870C222 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86E04EE8EB8209A0AD73BB7B /* PDFCombineStampExtensionExtensionView.swift in Sources */,
+				B4A072CE2184B361526C0D52 /* PDFCombineStampExtensionShareViewController.swift in Sources */,
+				D19B3A6525B2362CA986E1A0 /* SharedPDFManager.swift in Sources */,
+				3DCC58832F3CC2D6004E4FDC /* PresetEditorView 2.swift in Sources */,
+				3DCC58842F3CC2D6004E4FDC /* PresetManager 2.swift in Sources */,
+				3DCC58852F3CC2D6004E4FDC /* PresetPickerView 2.swift in Sources */,
+				3DCC58862F3CC2D6004E4FDC /* StampPreset 2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1854E2073B070373E95AA5FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 86EF296E3FFE4CBA3F50A32D /* PDFCombineStampExtension */;
+			targetProxy = C42E0C4846E73BA61A0C3E4F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		260692A8D9E0E049F740513C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -186,11 +268,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -208,16 +289,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = PDFCombineStamp;
-				INFOPLIST_KEY_LSUIElement = YES;
-				INFOPLIST_KEY_NSAppleEventsUsageDescription = "This app needs to control Finder to select the generated PDF.";
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.user.pdfcombinestamp;
-				PRODUCT_NAME = PDFCombineStamp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -230,7 +307,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -260,11 +336,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -276,15 +351,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = PDFCombineStamp;
-				INFOPLIST_KEY_LSUIElement = YES;
-				INFOPLIST_KEY_NSAppleEventsUsageDescription = "This app needs to control Finder to select the generated PDF.";
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.user.pdfcombinestamp;
-				PRODUCT_NAME = PDFCombineStamp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -293,30 +364,100 @@
 			};
 			name = Release;
 		};
+		694BA8E00FFC41845E8154F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PDFCombineStampExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = YNBETS5KPY;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Combine PDFs and Stamp";
+				INFOPLIST_KEY_NSExtensionPointIdentifier = com.apple.services;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.PDFCombineStamp.Extension;
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				SKIP_INSTALL = NO;
+			};
+			name = Release;
+		};
 		ACD0962230151F56AC1C1DBE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PDFCombineStamp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = YNBETS5KPY;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "PDF Combine & Stamp";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSMinimumSystemVersion = 13.0;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.PDFCombineStamp;
+				REGISTER_APP_GROUPS = YES;
 				SDKROOT = macosx;
 			};
 			name = Release;
+		};
+		AD2A0F47FBD772A46BD7DF95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PDFCombineStampExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = YNBETS5KPY;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Combine PDFs and Stamp";
+				INFOPLIST_KEY_NSExtensionPointIdentifier = com.apple.services;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.PDFCombineStamp.Extension;
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				SKIP_INSTALL = NO;
+			};
+			name = Debug;
 		};
 		F1FCDB8E116D57A98115C134 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PDFCombineStamp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = YNBETS5KPY;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "PDF Combine & Stamp";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSMinimumSystemVersion = 13.0;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.PDFCombineStamp;
+				REGISTER_APP_GROUPS = YES;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -324,6 +465,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2F164387A7B71E53DECD4BCD /* Build configuration list for PBXNativeTarget "PDFCombineStampExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD2A0F47FBD772A46BD7DF95 /* Debug */,
+				694BA8E00FFC41845E8154F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		406AB48496788D29C368013D /* Build configuration list for PBXProject "PDFCombineStamp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

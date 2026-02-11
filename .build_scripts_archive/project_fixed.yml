@@ -3,6 +3,7 @@ options:
   bundleIdPrefix: com.yourcompany
   deploymentTarget:
     macOS: "13.0"
+  createIntermediateGroups: true
   
 settings:
   MARKETING_VERSION: "1.1.0"
@@ -15,13 +16,12 @@ targets:
     type: application
     platform: macOS
     sources:
-      # Main app files
-      - BatesStampApp.swift
-      - BatesStampView.swift
-      - ContentView.swift
+      - path: PDFCombineStamp
+        excludes:
+          - "*.entitlements"
       # Shared PDF manager
       - SharedPDFManager.swift
-      # v1.1 files
+      # New v1.1 files
       - FileItem.swift
       - FileValidator.swift
       - DropZoneView.swift
@@ -30,13 +30,10 @@ targets:
       - ReorderableFileListView.swift
     settings:
       PRODUCT_BUNDLE_IDENTIFIER: com.yourcompany.PDFCombineStamp
+      CODE_SIGN_ENTITLEMENTS: PDFCombineStamp/PDFCombineStamp.entitlements
       CODE_SIGN_STYLE: Automatic
       ENABLE_HARDENED_RUNTIME: YES
-      GENERATE_INFOPLIST_FILE: YES
       INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.utilities
-      INFOPLIST_KEY_CFBundleDisplayName: "PDF Combine & Stamp"
-      INFOPLIST_KEY_NSHumanReadableCopyright: "Copyright © 2026"
-      INFOPLIST_KEY_LSMinimumSystemVersion: "13.0"
     dependencies:
       - target: PDFCombineStampExtension
         embed: true
@@ -45,19 +42,18 @@ targets:
     type: app-extension
     platform: macOS
     sources:
-      # Extension files
-      - PDFCombineStampExtensionShareViewController.swift
-      - PDFCombineStampExtensionExtensionView.swift
+      - path: PDFCombineStampExtension
+        excludes:
+          - "*.entitlements"
       # Shared PDF manager
       - SharedPDFManager.swift
     settings:
       PRODUCT_BUNDLE_IDENTIFIER: com.yourcompany.PDFCombineStamp.Extension
+      CODE_SIGN_ENTITLEMENTS: PDFCombineStampExtension/PDFCombineStampExtension.entitlements
       CODE_SIGN_STYLE: Automatic
       ENABLE_HARDENED_RUNTIME: YES
       SKIP_INSTALL: NO
-      GENERATE_INFOPLIST_FILE: YES
-      INFOPLIST_KEY_CFBundleDisplayName: "Combine PDFs and Stamp"
-      INFOPLIST_KEY_NSExtensionPointIdentifier: com.apple.services
+      INFOPLIST_FILE: PDFCombineStampExtension/Info.plist
 
 schemes:
   PDFCombineStamp:
@@ -66,3 +62,11 @@ schemes:
         PDFCombineStamp: all
     run:
       config: Debug
+    test:
+      config: Debug
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release
