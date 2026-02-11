@@ -5,7 +5,6 @@ import UniformTypeIdentifiers
 class ShareViewController: NSViewController {
     
     private var hostingController: NSHostingController<ExtensionView>?
-    private var extensionContext: NSExtensionContext?
     
     override func loadView() {
         self.view = NSView()
@@ -43,8 +42,7 @@ class ShareViewController: NSViewController {
     }
     
     private func extractURLsFromExtensionContext(completion: @escaping ([URL]) -> Void) {
-        guard let context = self.extensionContext,
-              let items = context.inputItems as? [NSExtensionItem] else {
+        guard let items = self.extensionContext?.inputItems as? [NSExtensionItem] else {
             completion([])
             return
         }

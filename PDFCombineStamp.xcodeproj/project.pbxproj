@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		237B402C786B706DEBEE9B7F /* PDFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F97BD1F92EB7C32FBC49E9 /* PDFManager.swift */; };
 		3BB90DE100A995BE3B4384E5 /* BatesStampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A214876D4FAC39F16F5637 /* BatesStampView.swift */; };
 		3DCC582B2F3C2C27004E4FDC /* PDFCombineStampExtensionShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC582A2F3C2C27004E4FDC /* PDFCombineStampExtensionShareViewController.swift */; };
 		3DCC582D2F3C2C3C004E4FDC /* PDFCombineStampExtensionExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC582C2F3C2C3C004E4FDC /* PDFCombineStampExtensionExtensionView.swift */; };
@@ -36,8 +35,11 @@
 		3DCC583D2F3C2E01004E4FDC /* QUICKSTART.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = QUICKSTART.md; sourceTree = "<group>"; };
 		3DCC583E2F3C2E46004E4FDC /* ARCHITECTURE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ARCHITECTURE.md; sourceTree = "<group>"; };
 		3DCC583F2F3C2E90004E4FDC /* INDEX.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = INDEX.md; sourceTree = "<group>"; };
+		3DCC58402F3C3042004E4FDC /* BUILD_ERROR_FIXES.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = BUILD_ERROR_FIXES.md; sourceTree = "<group>"; };
+		3DCC58412F3C332C004E4FDC /* INSTALLATION_GUIDE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = INSTALLATION_GUIDE.md; sourceTree = "<group>"; };
+		3DCC58422F3C3345004E4FDC /* install-local.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-local.sh"; sourceTree = "<group>"; };
+		3DCC58432F3C3369004E4FDC /* QUICK_INSTALL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = QUICK_INSTALL.md; sourceTree = "<group>"; };
 		4EFD53D5BB694169CD4DD1E5 /* PDFCombineStamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFCombineStamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C0F97BD1F92EB7C32FBC49E9 /* PDFManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFManager.swift; sourceTree = "<group>"; };
 		C7A214876D4FAC39F16F5637 /* BatesStampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatesStampView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,7 +57,6 @@
 			children = (
 				2EA6A02AD2BB5EF438AFBACE /* BatesStampApp.swift */,
 				C7A214876D4FAC39F16F5637 /* BatesStampView.swift */,
-				C0F97BD1F92EB7C32FBC49E9 /* PDFManager.swift */,
 				50EBBF74EA8D262A07F70D56 /* Products */,
 				3DCC582A2F3C2C27004E4FDC /* PDFCombineStampExtensionShareViewController.swift */,
 				3DCC582C2F3C2C3C004E4FDC /* PDFCombineStampExtensionExtensionView.swift */,
@@ -75,6 +76,10 @@
 				3DCC583D2F3C2E01004E4FDC /* QUICKSTART.md */,
 				3DCC583E2F3C2E46004E4FDC /* ARCHITECTURE.md */,
 				3DCC583F2F3C2E90004E4FDC /* INDEX.md */,
+				3DCC58402F3C3042004E4FDC /* BUILD_ERROR_FIXES.md */,
+				3DCC58412F3C332C004E4FDC /* INSTALLATION_GUIDE.md */,
+				3DCC58422F3C3345004E4FDC /* install-local.sh */,
+				3DCC58432F3C3369004E4FDC /* QUICK_INSTALL.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,7 +110,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					8B7A1F353310FF4DF21E22A3 = {
 						ProvisioningStyle = Automatic;
@@ -140,7 +145,6 @@
 				3DCC58322F3C2C7B004E4FDC /* ContentView.swift in Sources */,
 				3BB90DE100A995BE3B4384E5 /* BatesStampView.swift in Sources */,
 				3DCC58302F3C2C5F004E4FDC /* SharedPDFManager.swift in Sources */,
-				237B402C786B706DEBEE9B7F /* PDFManager.swift in Sources */,
 				3DCC582B2F3C2C27004E4FDC /* PDFCombineStampExtensionShareViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,10 +188,12 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -213,6 +219,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.user.pdfcombinestamp;
 				PRODUCT_NAME = PDFCombineStamp;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -255,10 +262,12 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -277,6 +286,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.user.pdfcombinestamp;
 				PRODUCT_NAME = PDFCombineStamp;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
@@ -288,6 +298,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -301,6 +312,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

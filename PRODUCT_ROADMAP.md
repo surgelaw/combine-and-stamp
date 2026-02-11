@@ -14,7 +14,23 @@ This document tracks feature priorities for improving product value while balanc
 
 ## Tier 1: Quick Wins (1-2 weeks each)
 
-### 1. Presets and Profiles
+### 1. Drag-and-Drop Interface
+- Summary: Support dragging PDFs to the application window rather than right clicking them in Finder. Once the files are added, an action button will prompt for the information that was requested when using the quick action.
+- Why it matters: Reduces filing mistakes and manual renaming.
+- Impact: High
+- Effort: Medium
+- Risk: Low
+- Priority: High
+
+### 2. Drag-and-Drop Reordering
+- Summary: Let users reorder source files in-app before combining.
+- Why it matters: Fixes the most common merge-order issue quickly.
+- Impact: High
+- Effort: Medium
+- Risk: Low
+- Priority: High
+
+### 3. Presets and Profiles
 - Summary: Save reusable templates for prefix, starting number, output naming, and stamp settings.
 - Why it matters: Removes repetitive setup on every job.
 - Impact: High
@@ -23,31 +39,16 @@ This document tracks feature priorities for improving product value while balanc
 - Priority: High
 - Notes: Include import/export JSON for team sharing.
 
-### 2. Smarter Output Naming
-- Summary: Support token-based output names (e.g., `{client}_{matter}_{date}_{bates_start}-{bates_end}`).
-- Why it matters: Reduces filing mistakes and manual renaming.
-- Impact: High
-- Effort: Low
-- Risk: Low
-- Priority: High
+## Tier 2: Premium Differentiators (Paid SKU candidates)
 
-### 3. Drag-and-Drop Reordering
-- Summary: Let users reorder source files in-app before combining.
-- Why it matters: Fixes the most common merge-order issue quickly.
+### 4. Flatten PDF Output (Remove Interactive Elements)
+- Summary: Add an optional "Flatten output" mode to remove clickable links/forms and reduce interactive PDF behavior.
+- Why it matters: Some courts reject filings containing active links or interactive elements.
 - Impact: High
 - Effort: Medium
-- Risk: Low
+- Risk: Medium
 - Priority: High
-
-### 4. Manifest/Audit Export
-- Summary: Emit CSV/JSON with input files, page counts, Bates range, output path, timestamp.
-- Why it matters: Improves defensibility and repeatability for legal workflows.
-- Impact: Medium
-- Effort: Low
-- Risk: Low
-- Priority: High
-
-## Tier 2: Premium Differentiators (Paid SKU candidates)
+- Notes: Implement natively with PDFKit/CoreGraphics by rasterizing each page at configurable DPI and rebuilding a new PDF. This avoids external dependencies and is compatible with both direct and App Store distribution.
 
 ### 5. Bookmark/Table-of-Contents Generation
 - Summary: Generate bookmarks from filenames and preserve PDF bookmarks where possible.
@@ -65,20 +66,19 @@ This document tracks feature priorities for improving product value while balanc
 - Risk: Low
 - Priority: High
 
-### 7. OCR + Searchable Output
-- Summary: OCR scanned pages before final merge/stamp.
-- Why it matters: Large user-perceived value for scanned exhibits.
-- Impact: High
-- Effort: High
-- Risk: Medium
-- Priority: Medium
-- Notes: Consider paid add-on due to cost/complexity.
-
-### 8. Court-Ready Presets (PDF/A + Filing Profiles)
+### 7. Court-Ready Presets (PDF/A + Filing Profiles)
 - Summary: One-click output profiles tuned for common filing constraints.
 - Why it matters: Reduces submission rejection risk.
 - Impact: High
 - Effort: Medium
+- Risk: Medium
+- Priority: Medium
+
+### 8. Improve Large File Support
+- Summary: Large files and large batches can be time and memory intensive. Test with larger files (greater than 1GB) to ensure the application performs suitably.
+- Why it matters: Provides predictability and trust by the user
+- Impact: Medium
+- Effort: High
 - Risk: Medium
 - Priority: Medium
 
@@ -124,11 +124,13 @@ This document tracks feature priorities for improving product value while balanc
 - Presets (basic)
 - Reordering
 - Basic manifest export
+- Optional flatten mode
 
 ### Paid Mac App Store Version
 - Everything in free version plus:
 - Advanced stamping
 - Bookmark generation
+- Native flatten mode
 - OCR/searchable output
 - Filing-ready profiles
 - Batch workflows (later)
@@ -136,20 +138,21 @@ This document tracks feature priorities for improving product value while balanc
 ## Suggested Next 3 Milestones
 
 ### Milestone A (v1.1)
-- Presets/profiles
-- Smart naming tokens
+- Drag-and-drop interface
 - Reordering UI
-- Basic manifest export
+- Presets/profiles
+- Core UX polish and error handling
 
 ### Milestone B (v1.2)
+- Flatten output option
 - Bookmark generation
 - Advanced stamping options
-- Improved progress/error states
+- Court-ready preset baseline
 
 ### Milestone C (v1.3)
-- OCR prototype
-- Filing profile presets
-- Monetization packaging for App Store tiering
+- Improve large-file support (performance and memory hardening)
+- Filing profile expansion
+- Batch-mode design/prototype
 
 ## Backlog Intake Rules
 - Add feature requests with: user problem, expected outcome, sample files, and success metric.
@@ -165,14 +168,14 @@ This document tracks feature priorities for improving product value while balanc
 
 | ID | Feature | Tier | Status | Target Version | Notes |
 |---|---|---|---|---|---|
-| F-01 | Presets and Profiles | 1 | Planned | v1.1 | |
-| F-02 | Smarter Output Naming | 1 | Planned | v1.1 | |
-| F-03 | Drag-and-Drop Reordering | 1 | Planned | v1.1 | |
-| F-04 | Manifest/Audit Export | 1 | Planned | v1.1 | |
-| F-05 | Bookmark/TOC Generation | 2 | Planned | v1.2 | |
-| F-06 | Advanced Stamping | 2 | Planned | v1.2 | |
-| F-07 | OCR Searchable Output | 2 | Backlog | v1.3+ | |
-| F-08 | Filing Presets | 2 | Backlog | v1.3+ | |
+| F-01 | Drag-and-Drop Interface | 1 | Planned | v1.1 | Replace Finder-first workflow with in-app drop zone flow |
+| F-02 | Drag-and-Drop Reordering | 1 | Planned | v1.1 | Preserve explicit file/page ordering |
+| F-03 | Presets and Profiles | 1 | Planned | v1.1 | Include import/export JSON for team sharing |
+| F-04 | Flatten PDF Output | 2 | Planned | v1.2 | Native rasterize/rebuild flow (PDFKit/CoreGraphics) |
+| F-05 | Bookmark/TOC Generation | 2 | Planned | v1.2 | Preserve existing bookmarks where possible |
+| F-06 | Advanced Stamping | 2 | Planned | v1.2 | Header/footer/confidentiality/date presets |
+| F-07 | Court-Ready Presets | 2 | Planned | v1.2-v1.3 | Filing profile baseline then expand |
+| F-08 | Improve Large File Support | 2 | Planned | v1.3 | Performance + memory hardening for >1GB workflows |
 | F-09 | Batch Mode | 3 | Backlog | v1.4+ | |
 | F-10 | Split + Recombine | 3 | Backlog | v1.4+ | |
 | F-11 | Duplicate Detection | 3 | Backlog | v1.4+ | |
